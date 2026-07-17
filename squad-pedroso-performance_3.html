@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Squad Matheus Pedroso · Performance</title>
+<style>
+@font-face{font-family:'Mont';font-weight:400;font-display:swap;src:url('https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/gr9zwwtzbmti/b/Assets/o/cdn/fonts/mont-regular.woff2') format('woff2')}
+@font-face{font-family:'Mont';font-weight:600;font-display:swap;src:url('https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/gr9zwwtzbmti/b/Assets/o/cdn/fonts/mont-semibold.woff2') format('woff2')}
+@font-face{font-family:'Mont';font-weight:700;font-display:swap;src:url('https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/gr9zwwtzbmti/b/Assets/o/cdn/fonts/mont-bold.woff2') format('woff2')}
+@font-face{font-family:'Mont';font-weight:800;font-display:swap;src:url('https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/gr9zwwtzbmti/b/Assets/o/cdn/fonts/mont-heavy.woff2') format('woff2')}
+@font-face{font-family:'Mont';font-weight:900;font-display:swap;src:url('https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/gr9zwwtzbmti/b/Assets/o/cdn/fonts/mont-black.woff2') format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:100 900;font-display:swap;src:url('https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/gr9zwwtzbmti/b/Assets/o/cdn/fonts/montserrat.woff2') format('woff2')}
+</style>
+<style>
+:root{
+  --brand-ink:#282727; --brand-white:#fff;
+  --neutral-50:#f7f7f7; --neutral-100:#ececec; --neutral-200:#d9d9d9; --neutral-300:#c2c2c1; --neutral-400:#9a9a99; --neutral-500:#6f6e6e; --neutral-600:#5c5b5b; --neutral-700:#444342; --neutral-800:#333232; --neutral-900:#282727;
+  --blue-50:#eef3fc; --blue-100:#d6e1f7; --blue-200:#aec3ef; --blue-300:#7ea3e8; --blue-400:#4a7ddc; --blue-500:#1b59cf; --blue-600:#1648a6; --blue-700:#10347a; --blue-800:#0c2a61; --blue-900:#0a2350;
+  --navy-400:#1c4a9e; --navy-500:#123a8a; --navy-700:#0a2b69; --navy-800:#07204e; --navy-900:#051536;
+  --amber-50:#fef6ec; --amber-100:#fde9cf; --amber-200:#fbd6a3; --amber-300:#f9c27e; --amber-400:#f59f40; --amber-500:#e8851c; --amber-600:#c46d14;
+  --orange-200:#f6c4ab; --orange-300:#f0a079; --orange-400:#ea8049; --orange-500:#e46627; --orange-600:#c4521b; --orange-700:#9e4015;
+  --gradient-degrade:linear-gradient(320deg,#e46627 4%,#f59f40 25%,#1b59cf 75%,#0a2b69 100%);
+  --gradient-degrade-splat:linear-gradient(320deg,#e46627 12%,#f59f40 40%,#1b59cf 64%,#0a2b69 83%);
+  --gradient-degrade-soft:linear-gradient(135deg,#f59f40 0%,#1b59cf 100%);
+  --gradient-cool:linear-gradient(135deg,#1b59cf 0%,#0a2b69 100%);
+  --gradient-warm:linear-gradient(135deg,#f59f40 0%,#e46627 100%);
+  --font-display:"Mont","Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-sans:"Montserrat","Mont",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --fw-light:300; --fw-book:400; --fw-semibold:600; --fw-bold:700; --fw-heavy:800; --fw-black:900;
+  --text-display:3.75rem; --lh-display:1.04; --text-h1:3rem; --lh-h1:1.08; --text-h2:2.25rem; --lh-h2:1.12;
+  --text-h3:1.75rem; --lh-h3:1.15; --text-h4:1.375rem; --lh-h4:1.25; --text-lead:1.25rem; --lh-lead:1.5;
+  --text-body:1rem; --lh-body:1.6; --text-small:.875rem; --lh-small:1.5; --text-eyebrow:.75rem; --lh-eyebrow:1.2;
+  --tracking-tight:-.02em; --tracking-eyebrow:.12em;
+  --radius-xs:.5rem; --radius-sm:1rem; --radius-md:1.25rem; --radius-lg:1.5rem; --radius-pill:9999px; --radius:var(--radius-md);
+  --shadow-sm:0 1px 2px rgb(40 39 39/.06); --shadow-soft:0 8px 30px -8px rgb(40 39 39/.12); --shadow-lg:0 24px 60px -20px rgb(10 43 105/.25);
+  --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem; --space-5:1.25rem; --space-6:1.5rem; --space-8:2rem; --space-10:2.5rem; --space-12:3rem; --space-16:4rem; --space-20:5rem; --space-24:6rem;
+  --background:var(--brand-white); --foreground:var(--brand-ink);
+  --card:var(--brand-white); --card-foreground:var(--brand-ink);
+  --primary:var(--blue-500); --primary-foreground:var(--brand-white);
+  --secondary:var(--navy-700); --secondary-foreground:var(--brand-white);
+  --accent:var(--amber-400); --accent-foreground:var(--brand-ink);
+  --destructive:var(--orange-500); --destructive-foreground:var(--brand-white);
+  --muted:var(--neutral-100); --muted-foreground:var(--neutral-600);
+  --border:var(--neutral-200); --input:var(--neutral-200); --ring:var(--blue-500);
+  --chart-1:var(--blue-500); --chart-2:var(--amber-400); --chart-3:var(--navy-700); --chart-4:var(--orange-500); --chart-5:var(--neutral-400);
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none}
+html::-webkit-scrollbar,body::-webkit-scrollbar{width:0;height:0;display:none}
+body{font-family:var(--font-sans);font-weight:var(--fw-book);font-size:var(--text-body);line-height:var(--lh-body);color:var(--foreground);background:var(--background);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:var(--tracking-tight);line-height:1.1}
+img{max-width:100%;display:block}
+svg{display:block;overflow:visible}
+
+/* shell */
+.slide{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:var(--space-16) clamp(var(--space-8),3vw,var(--space-16))}
+.slide-inner{width:100%;max-width:1080px;opacity:0;transform:translateY(28px);transition:all .5s var(--ease)}
+.slide-inner.in{opacity:1;transform:none}
+.s-light{background:var(--neutral-50)} .s-white{background:#fff}
+
+.sidebar{position:fixed;left:0;top:0;width:280px;height:100vh;background:#fff;border-right:1px solid var(--border);display:flex;flex-direction:column;z-index:100;transform:translateX(-100%);transition:transform .4s var(--ease)}
+.sidebar.show{transform:none}
+.sidebar-head{padding:var(--space-6);border-bottom:1px solid var(--border)}
+.sidebar-head img{height:28px}
+.nav{flex:1;padding:var(--space-3);overflow-y:auto}
+.nav-item{display:flex;gap:var(--space-3);align-items:center;width:100%;padding:var(--space-3) var(--space-4);border:0;background:none;cursor:pointer;font-family:inherit;text-align:left;border-radius:var(--radius-xs);margin-bottom:2px;transition:.2s var(--ease)}
+.nav-item:hover{background:var(--muted)}
+.nav-item.active{background:var(--primary)} .nav-item.active .nav-num,.nav-item.active .nav-label{color:#fff}
+.nav-num{font-size:.625rem;font-weight:var(--fw-bold);color:var(--neutral-400);min-width:18px}
+.nav-label{font-size:.6875rem;font-weight:var(--fw-semibold);color:var(--muted-foreground)}
+.sidebar-foot{padding:var(--space-4) var(--space-6)}
+.progress{height:2px;background:var(--muted);border-radius:2px;overflow:hidden}
+.progress>i{display:block;height:100%;width:0;background:var(--gradient-degrade);transition:width .3s var(--ease)}
+.main.with-sidebar{margin-left:280px}
+.sb-toggle{display:none;position:fixed;top:14px;left:14px;z-index:120;width:44px;height:44px;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:var(--radius-xs);background:#fff;color:var(--foreground);cursor:pointer}
+@media(max-width:768px){.sidebar{width:88%;max-width:320px} .main.with-sidebar{margin-left:0}}
+
+.splash{min-height:100svh;background:var(--gradient-degrade);background-size:200% 200%;animation:splash-drift 20s ease-in-out infinite}
+@keyframes splash-drift{0%,100%{background-position:0% 0%}50%{background-position:100% 100%}}
+.splash-logo{height:64px;width:auto}
+.scroll-cue{position:absolute;left:50%;bottom:32px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;color:rgba(255,255,255,.75);font-size:var(--text-eyebrow);text-transform:uppercase;letter-spacing:var(--tracking-eyebrow)}
+.mouse{width:26px;height:42px;border:2px solid rgba(255,255,255,.7);border-radius:14px;position:relative}
+.mouse::after{content:'';position:absolute;left:50%;top:8px;width:4px;height:8px;border-radius:2px;background:#fff;transform:translateX(-50%);animation:mouse-wheel 1.6s var(--ease) infinite}
+@keyframes mouse-wheel{0%{opacity:0;transform:translate(-50%,0)}30%,60%{opacity:1}100%{opacity:0;transform:translate(-50%,14px)}}
+@media(prefers-reduced-motion:reduce){.splash{animation:none}.mouse::after{animation:none;opacity:.8}}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s var(--ease),transform .55s var(--ease);transition-delay:calc(var(--i,0)*90ms)}
+.slide-inner.in .reveal{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}.parallax{transform:none!important}}
+
+/* componentes */
+.eyebrow{font-size:var(--text-eyebrow);font-weight:var(--fw-semibold);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--muted-foreground)}
+h2.title{font-size:var(--text-h2);font-weight:var(--fw-bold);margin:var(--space-3) 0}
+.accent{color:var(--primary)}
+.accent.alt{color:var(--destructive)}
+.accent-bar{width:64px;height:4px;border-radius:2px;background:var(--gradient-degrade)}
+.desc{font-size:var(--text-lead);line-height:var(--lh-lead);color:var(--muted-foreground);max-width:60ch}
+
+.grid{display:grid;gap:var(--space-4);margin-top:var(--space-8)}
+.grid-2{grid-template-columns:repeat(2,1fr)} .grid-3{grid-template-columns:repeat(3,1fr)} .grid-4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);color:var(--card-foreground);border:1px solid var(--border);border-radius:var(--radius);padding:var(--space-6);box-shadow:var(--shadow-sm);transition:.2s var(--ease)}
+.card:hover{box-shadow:var(--shadow-soft);transform:translateY(-2px)}
+.card-icon{width:40px;height:40px;display:grid;place-items:center;border-radius:var(--radius-xs);background:color-mix(in srgb,var(--primary) 8%,transparent);color:var(--primary);margin-bottom:var(--space-4)}
+.card h4{font-size:var(--text-h4);font-weight:var(--fw-bold)} .card p{font-size:var(--text-small);color:var(--muted-foreground);margin-top:var(--space-2)}
+@media(max-width:768px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+
+.metric{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:var(--radius-xs);padding:var(--space-5)}
+.metric b{font-family:var(--font-display);font-size:var(--text-h2);font-weight:var(--fw-heavy);color:var(--primary);display:block}
+.metric span{font-size:var(--text-small);color:var(--muted-foreground)}
+
+.callout{border-left:3px solid var(--accent);background:var(--amber-50);border-radius:0 var(--radius-xs) var(--radius-xs) 0;padding:var(--space-5)}
+.callout strong{color:var(--foreground)}
+
+.table-wrap{overflow:hidden;border:1px solid var(--border);border-radius:var(--radius);margin-top:var(--space-6)}
+.table{width:100%;border-collapse:collapse;font-size:var(--text-small)}
+.table thead tr{background:var(--primary);color:var(--primary-foreground)}
+.table.accent thead tr{background:var(--accent);color:var(--accent-foreground)}
+.table th{padding:var(--space-3) var(--space-4);text-align:left;font-size:var(--text-eyebrow);font-weight:var(--fw-bold);text-transform:uppercase;letter-spacing:.04em}
+.table td{padding:var(--space-3) var(--space-4)}
+.table tbody tr{background:var(--card)}
+.table tbody tr:nth-child(even){background:var(--neutral-50)}
+@media(max-width:768px){.table-wrap{overflow-x:auto}}
+
+.badge{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:var(--radius-pill);font-size:var(--text-eyebrow);font-weight:var(--fw-semibold)}
+.badge.primary{background:color-mix(in srgb,var(--primary) 12%,transparent);color:var(--primary)}
+.badge.ok{background:color-mix(in srgb,var(--secondary) 12%,transparent);color:var(--secondary)}
+.badge.warn{background:var(--amber-100);color:var(--amber-600)}
+.badge.err{background:color-mix(in srgb,var(--destructive) 12%,transparent);color:var(--orange-600)}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:var(--space-3) var(--space-6);border-radius:var(--radius-pill);font-family:inherit;font-weight:var(--fw-semibold);font-size:var(--text-small);border:0;cursor:pointer;text-decoration:none;transition:.2s var(--ease)}
+.btn.primary{background:var(--primary);color:var(--primary-foreground)} .btn.primary:hover{background:var(--blue-600)}
+.btn.accent{background:var(--accent);color:var(--accent-foreground)} .btn.accent:hover{background:var(--amber-500)}
+.btn.ghost{background:transparent;color:var(--primary);box-shadow:inset 0 0 0 1px var(--border)}
+
+/* específico do deck */
+.rank-row{display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4) var(--space-5);border:1px solid var(--border);border-radius:var(--radius-xs);background:var(--card)}
+.rank-num{font-family:var(--font-display);font-weight:var(--fw-black);font-size:1.5rem;color:var(--neutral-300);min-width:34px}
+.rank-name{font-weight:var(--fw-bold);font-size:var(--text-body)}
+.rank-sub{font-size:var(--text-eyebrow);color:var(--muted-foreground);text-transform:uppercase;letter-spacing:.04em}
+.rank-score{font-family:var(--font-display);font-weight:var(--fw-heavy);font-size:var(--text-h3);color:var(--primary);margin-left:auto;min-width:52px;text-align:right}
+
+@media(max-width:880px){
+  .slide{padding:5rem 1.4rem}
+  h2.title{font-size:1.7rem}
+  .sidebar{width:84%;max-width:300px} .main.with-sidebar{margin-left:0}
+  .sidebar-head{padding-top:64px}
+  body.nav-on .sb-toggle{display:flex}
+  .grid-4{grid-template-columns:repeat(2,1fr)} .grid-3,.grid-2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<button class="sb-toggle" aria-label="Abrir menu">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+</button>
+
+<nav class="sidebar">
+  <div class="sidebar-head"><img src="https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/gr9zwwtzbmti/b/Assets/o/cdn/img/logo-braga-preto.svg" alt="Braga IT"></div>
+  <div class="nav">
+    <button class="nav-item" data-slide="painel-geral"><span class="nav-num">01</span><span class="nav-label">Painel geral</span></button>
+    <button class="nav-item" data-slide="operacao"><span class="nav-num">02</span><span class="nav-label">Prioridade e canal</span></button>
+    <button class="nav-item" data-slide="sla-detalhe"><span class="nav-num">03</span><span class="nav-label">SLA violado</span></button>
+    <button class="nav-item" data-slide="overview"><span class="nav-num">04</span><span class="nav-label">Visão da squad</span></button>
+    <button class="nav-item" data-slide="ranking"><span class="nav-num">05</span><span class="nav-label">Ranking da squad</span></button>
+    <button class="nav-item" data-slide="meta-horas"><span class="nav-num">06</span><span class="nav-label">Meta de apontamento</span></button>
+    <button class="nav-item" data-slide="destaques"><span class="nav-num">07</span><span class="nav-label">Destaques e atenção</span></button>
+  </div>
+  <div class="sidebar-foot"><div class="progress"><i></i></div></div>
+</nav>
+
+<main class="main">
+
+  <section id="splash" class="slide splash">
+    <div class="slide-inner" style="text-align:center">
+      <img class="splash-logo" style="margin:0 auto var(--space-8)" src="https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/gr9zwwtzbmti/b/Assets/o/cdn/img/logo-braga-branco.svg" alt="Braga IT">
+      <div class="eyebrow" style="color:rgba(255,255,255,.8)">Performance de squad</div>
+      <h1 style="color:#fff;font-size:var(--text-display);font-weight:var(--fw-black);margin:var(--space-4) 0">Squad Matheus Pedroso</h1>
+      <p style="color:rgba(255,255,255,.85);font-size:var(--text-lead);max-width:44ch;margin:0 auto">Score, compliance e volume de chamados por técnico</p>
+    </div>
+    <div class="scroll-cue"><span class="mouse"></span><span>role para começar</span></div>
+  </section>
+
+  <section id="painel-geral" class="slide s-white">
+    <div class="slide-inner">
+      <div class="eyebrow reveal" style="--i:0">Painel geral · Todos os squads</div>
+      <h2 class="title reveal" style="--i:1">Retrato da operação no período</h2>
+      <div class="accent-bar reveal" style="--i:1"></div>
+      <p class="desc reveal" style="--i:2">Período de 13/07/2026 a 17/07/2026, considerando todos os técnicos e squads monitorados. Inclui Kemily Lima (TI interno, N1 Zanini), fora do escopo da Squad Pedroso.</p>
+
+      <div class="grid grid-4">
+        <div class="metric reveal" style="--i:3"><b>8</b><span>Técnicos</span></div>
+        <div class="metric reveal" style="--i:4"><b>99</b><span>Total de tickets</span></div>
+        <div class="metric reveal" style="--i:5"><b>96,0%</b><span>Compliance médio</span></div>
+        <div class="metric reveal" style="--i:6"><b>137:42</b><span>Total de horas</span></div>
+      </div>
+
+      <h4 class="reveal" style="--i:7;margin-top:var(--space-8);margin-bottom:var(--space-4);font-size:var(--text-small);text-transform:uppercase;letter-spacing:.04em;color:var(--muted-foreground)">Distribuição por nível</h4>
+      <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+        <div class="reveal" style="--i:8;display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4) var(--space-5);border:1px solid var(--border);border-left:4px solid var(--secondary);border-radius:var(--radius-xs);background:var(--card)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6z"/></svg>
+          <strong style="flex:0 0 auto">Excelente</strong>
+          <span style="color:var(--muted-foreground);font-size:var(--text-small)">score 85+</span>
+          <span style="margin-left:auto;font-family:var(--font-display);font-weight:var(--fw-heavy);font-size:var(--text-h4);color:var(--secondary)">4</span>
+        </div>
+        <div class="reveal" style="--i:9;display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4) var(--space-5);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:var(--radius-xs);background:var(--card)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          <strong style="flex:0 0 auto">Bom</strong>
+          <span style="color:var(--muted-foreground);font-size:var(--text-small)">70 a 84</span>
+          <span style="margin-left:auto;font-family:var(--font-display);font-weight:var(--fw-heavy);font-size:var(--text-h4);color:var(--primary)">2</span>
+        </div>
+        <div class="reveal" style="--i:10;display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4) var(--space-5);border:1px solid var(--border);border-left:4px solid var(--amber-400);border-radius:var(--radius-xs);background:var(--card)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amber-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 17h.01"/></svg>
+          <strong style="flex:0 0 auto">Atenção</strong>
+          <span style="color:var(--muted-foreground);font-size:var(--text-small)">45 a 69</span>
+          <span style="margin-left:auto;font-family:var(--font-display);font-weight:var(--fw-heavy);font-size:var(--text-h4);color:var(--amber-500)">0</span>
+        </div>
+        <div class="reveal" style="--i:11;display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4) var(--space-5);border:1px solid var(--border);border-left:4px solid var(--destructive);border-radius:var(--radius-xs);background:var(--card)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--destructive)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.9" y1="4.9" x2="19.1" y2="19.1"/></svg>
+          <strong style="flex:0 0 auto">Crítico</strong>
+          <span style="color:var(--muted-foreground);font-size:var(--text-small)">abaixo de 45 ou override</span>
+          <span style="margin-left:auto;font-family:var(--font-display);font-weight:var(--fw-heavy);font-size:var(--text-h4);color:var(--destructive)">0</span>
+        </div>
+        <div class="reveal" style="--i:12;display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4) var(--space-5);border:1px solid var(--border);border-left:4px solid var(--neutral-400);border-radius:var(--radius-xs);background:var(--card)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--neutral-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          <strong style="flex:0 0 auto">Insuficiente</strong>
+          <span style="color:var(--muted-foreground);font-size:var(--text-small)">menos de 5 chamados</span>
+          <span style="margin-left:auto;font-family:var(--font-display);font-weight:var(--fw-heavy);font-size:var(--text-h4);color:var(--neutral-500)">2</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="operacao" class="slide s-light">
+    <div class="slide-inner">
+      <div class="eyebrow reveal" style="--i:0">Base detalhada · 99 tickets</div>
+      <h2 class="title reveal" style="--i:1">Como o volume se distribui</h2>
+      <div class="accent-bar reveal" style="--i:1"></div>
+      <p class="desc reveal" style="--i:2">Prioridade e canal de abertura de todos os tickets do período, mesa SAB concentra 76 dos 99 (77%) contra 23 no LAB.</p>
+
+      <div class="grid grid-2" style="margin-top:var(--space-8)">
+        <div class="reveal" style="--i:3">
+          <h4 style="font-size:var(--text-small);text-transform:uppercase;letter-spacing:.04em;color:var(--muted-foreground);margin-bottom:var(--space-4)">Por prioridade</h4>
+          <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+            <div style="display:grid;grid-template-columns:70px 1fr 34px;gap:var(--space-3);align-items:center">
+              <span style="font-size:var(--text-small)">Baixa</span>
+              <div style="height:10px;background:var(--muted);border-radius:6px;overflow:hidden"><div style="height:100%;width:100%;background:var(--neutral-400);border-radius:6px"></div></div>
+              <span style="font-size:var(--text-small);font-weight:var(--fw-bold)">51</span>
+            </div>
+            <div style="display:grid;grid-template-columns:70px 1fr 34px;gap:var(--space-3);align-items:center">
+              <span style="font-size:var(--text-small)">Média</span>
+              <div style="height:10px;background:var(--muted);border-radius:6px;overflow:hidden"><div style="height:100%;width:45%;background:var(--primary);border-radius:6px"></div></div>
+              <span style="font-size:var(--text-small);font-weight:var(--fw-bold)">23</span>
+            </div>
+            <div style="display:grid;grid-template-columns:70px 1fr 34px;gap:var(--space-3);align-items:center">
+              <span style="font-size:var(--text-small)">Alta</span>
+              <div style="height:10px;background:var(--muted);border-radius:6px;overflow:hidden"><div style="height:100%;width:27%;background:var(--amber-400);border-radius:6px"></div></div>
+              <span style="font-size:var(--text-small);font-weight:var(--fw-bold)">14</span>
+            </div>
+            <div style="display:grid;grid-template-columns:70px 1fr 34px;gap:var(--space-3);align-items:center">
+              <span style="font-size:var(--text-small)">Crítica</span>
+              <div style="height:10px;background:var(--muted);border-radius:6px;overflow:hidden"><div style="height:100%;width:22%;background:var(--destructive);border-radius:6px"></div></div>
+              <span style="font-size:var(--text-small);font-weight:var(--fw-bold)">11</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="--i:4">
+          <h4 style="font-size:var(--text-small);text-transform:uppercase;letter-spacing:.04em;color:var(--muted-foreground);margin-bottom:var(--space-4)">Por canal de abertura</h4>
+          <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+            <div style="display:grid;grid-template-columns:110px 1fr 34px;gap:var(--space-3);align-items:center">
+              <span style="font-size:var(--text-small)">Tiflux Web</span>
+              <div style="height:10px;background:var(--muted);border-radius:6px;overflow:hidden"><div style="height:100%;width:100%;background:var(--primary);border-radius:6px"></div></div>
+              <span style="font-size:var(--text-small);font-weight:var(--fw-bold)">56</span>
+            </div>
+            <div style="display:grid;grid-template-columns:110px 1fr 34px;gap:var(--space-3);align-items:center">
+              <span style="font-size:var(--text-small)">Tiflux Agent</span>
+              <div style="height:10px;background:var(--muted);border-radius:6px;overflow:hidden"><div style="height:100%;width:36%;background:var(--secondary);border-radius:6px"></div></div>
+              <span style="font-size:var(--text-small);font-weight:var(--fw-bold)">20</span>
+            </div>
+            <div style="display:grid;grid-template-columns:110px 1fr 34px;gap:var(--space-3);align-items:center">
+              <span style="font-size:var(--text-small)">Tiflux API</span>
+              <div style="height:10px;background:var(--muted);border-radius:6px;overflow:hidden"><div style="height:100%;width:30%;background:var(--secondary);border-radius:6px"></div></div>
+              <span style="font-size:var(--text-small);font-weight:var(--fw-bold)">17</span>
+            </div>
+            <div style="display:grid;grid-template-columns:110px 1fr 34px;gap:var(--space-3);align-items:center">
+              <span style="font-size:var(--text-small)">Recorrente</span>
+              <div style="height:10px;background:var(--muted);border-radius:6px;overflow:hidden"><div style="height:100%;width:7%;background:var(--neutral-400);border-radius:6px"></div></div>
+              <span style="font-size:var(--text-small);font-weight:var(--fw-bold)">4</span>
+            </div>
+            <div style="display:grid;grid-template-columns:110px 1fr 34px;gap:var(--space-3);align-items:center">
+              <span style="font-size:var(--text-small)">Email</span>
+              <div style="height:10px;background:var(--muted);border-radius:6px;overflow:hidden"><div style="height:100%;width:4%;background:var(--neutral-400);border-radius:6px"></div></div>
+              <span style="font-size:var(--text-small);font-weight:var(--fw-bold)">2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout reveal" style="--i:5;margin-top:var(--space-6)">
+        <strong>Leitura:</strong> maioria baixa prioridade (52%), mas crítica + alta somam 25 tickets (25%) e concentram o risco de SLA do período.
+      </div>
+    </div>
+  </section>
+
+  <section id="sla-detalhe" class="slide s-white">
+    <div class="slide-inner">
+      <div class="eyebrow reveal" style="--i:0">SLA</div>
+      <h2 class="title reveal" style="--i:1">1 violação no escopo da squad, 3 fora dele</h2>
+      <div class="accent-bar reveal" style="--i:1"></div>
+      <p class="desc reveal" style="--i:2">As 4 violações do período são da ZANINI AUDITORIA. Kemily Lima é TI interno alocado no N1 da Zanini, fora do escopo desta squad, então as 3 violações dela não entram na métrica da squad.</p>
+
+      <div class="table-wrap reveal" style="--i:3">
+        <table class="table accent">
+          <thead><tr><th>Técnico</th><th>Ticket</th><th>Assunto</th><th>Prioridade</th><th>Deadline</th><th>Escopo</th></tr></thead>
+          <tbody>
+            <tr><td>Wanderlei Marques Filho</td><td>171288</td><td>Erro · Servidor</td><td><span class="badge err">Crítica</span></td><td>17/07 08:17</td><td><span class="badge primary">Squad Pedroso</span></td></tr>
+            <tr><td>Kemily Lima</td><td>171063</td><td>Servidor 12 · parametrizar rede</td><td><span class="badge warn">Alta</span></td><td>15/07 11:13</td><td><span class="badge">N1 Zanini (interno)</span></td></tr>
+            <tr><td>Kemily Lima</td><td>170996</td><td>Conexão RDP no SRVZANINI12</td><td><span class="badge warn">Alta</span></td><td>14/07 14:41</td><td><span class="badge">N1 Zanini (interno)</span></td></tr>
+            <tr><td>Kemily Lima</td><td>170907</td><td>Teste acesso VPN, home office</td><td><span class="badge primary">Média</span></td><td>14/07 12:00</td><td><span class="badge">N1 Zanini (interno)</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid grid-2" style="margin-top:var(--space-6)">
+        <div class="metric reveal" style="--i:4"><b>1</b><span>Violação no escopo da squad (Wanderlei, crítica)</span></div>
+        <div class="metric reveal" style="--i:5"><b>3</b><span>Violações do N1 interno da Zanini, fora da métrica da squad</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="overview" class="slide s-light">
+    <div class="slide-inner">
+      <div class="eyebrow reveal" style="--i:0">Squad Matheus Pedroso</div>
+      <h2 class="title reveal" style="--i:1">A squad opera em nível <span class="accent">excelente</span></h2>
+      <div class="accent-bar reveal" style="--i:1"></div>
+      <p class="desc reveal" style="--i:2">Quatro dos seis técnicos fecham o período com score excelente e compliance de 100%. O volume se concentra em três atendentes, com um caso de baixa cobertura e um de reincidência a monitorar.</p>
+
+      <div class="grid grid-4">
+        <div class="metric reveal" style="--i:3"><b>89,2</b><span>Score médio (excelente)</span></div>
+        <div class="metric reveal" style="--i:4"><b>83</b><span>Tickets atendidos na squad</span></div>
+        <div class="metric reveal" style="--i:5"><b>4 de 6</b><span>Técnicos em compliance 100%</span></div>
+        <div class="metric reveal" style="--i:6"><b>1</b><span>SLA violado no período</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ranking" class="slide s-white">
+    <div class="slide-inner">
+      <div class="eyebrow reveal" style="--i:0">Ranking</div>
+      <h2 class="title reveal" style="--i:1">Performance individual da squad</h2>
+      <div class="accent-bar reveal" style="--i:1"></div>
+
+      <div class="table-wrap reveal" style="--i:2">
+        <table class="table">
+          <thead><tr>
+            <th>Técnico</th><th>Score</th><th>Tickets</th><th>Violados</th><th>Compliance</th><th>Reopens</th><th>Horas</th><th>H/ticket</th><th>%Crit+alta</th><th>Cob. apont.</th>
+          </tr></thead>
+          <tbody>
+            <tr><td>Vinícius Angelo Marquezin</td><td><span class="badge ok">95 · Excelente</span></td><td>21</td><td>0</td><td>100,0%</td><td>1 (5%)</td><td>28:37</td><td>01:22</td><td>29%</td><td>124%</td></tr>
+            <tr><td>Iago Motareli</td><td><span class="badge ok">90 · Excelente</span></td><td>23</td><td>0</td><td>100,0%</td><td>0 (0%)</td><td>30:07</td><td>01:19</td><td>0%</td><td>83%</td></tr>
+            <tr><td>Taynan Taveiros</td><td><span class="badge ok">90 · Excelente</span></td><td>20</td><td>0</td><td>100,0%</td><td>0 (0%)</td><td>14:10</td><td>00:43</td><td>55%</td><td>125%</td></tr>
+            <tr><td>Jonas Almeida Sousa Silva</td><td><span class="badge ok">88 · Excelente</span></td><td>8</td><td>0</td><td>100,0%</td><td>0 (0%)</td><td>23:41</td><td>02:58</td><td>13%</td><td>138%</td></tr>
+            <tr><td>Kleber Palma</td><td><span class="badge warn">Insuficiente</span></td><td>1</td><td>0</td><td>100,0%</td><td>0 (0%)</td><td>01:21</td><td>01:21</td><td>0%</td><td>100%</td></tr>
+            <tr><td>Wanderlei Marques Filho</td><td><span class="badge primary">83 · Bom</span></td><td>10</td><td>1</td><td>90,0%</td><td>0 (0%)</td><td>29:56</td><td>03:00</td><td>10%</td><td>170%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="meta-horas" class="slide s-light">
+    <div class="slide-inner">
+      <div class="eyebrow reveal" style="--i:0">Meta da squad</div>
+      <h2 class="title reveal" style="--i:1">30 horas de apontamento por semana</h2>
+      <div class="accent-bar reveal" style="--i:1"></div>
+      <p class="desc reveal" style="--i:2">Horas apontadas no período (13 a 17/07) frente à meta semanal de 30h por técnico. Base: coluna "Horas" do ranking, que contempla apontamentos em qualquer ticket no período (o CSV de tickets criados na semana não captura horas lançadas em tickets abertos antes).</p>
+
+      <div style="display:flex;flex-direction:column;gap:var(--space-4);margin-top:var(--space-8)">
+        <div class="reveal" style="--i:3">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
+            <span style="font-weight:var(--fw-semibold);font-size:var(--text-small)">Iago Motareli</span>
+            <span style="font-size:var(--text-small);color:var(--muted-foreground)">30:07 · 100% da meta</span>
+          </div>
+          <div style="height:12px;background:var(--muted);border-radius:6px;position:relative;overflow:visible">
+            <div style="height:100%;width:100%;background:var(--secondary);border-radius:6px"></div>
+          </div>
+        </div>
+        <div class="reveal" style="--i:4">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
+            <span style="font-weight:var(--fw-semibold);font-size:var(--text-small)">Wanderlei Marques Filho <span class="badge primary" style="margin-left:6px">assessment no período</span></span>
+            <span style="font-size:var(--text-small);color:var(--muted-foreground)">29:56 · 100% da meta</span>
+          </div>
+          <div style="height:12px;background:var(--muted);border-radius:6px;position:relative;overflow:visible">
+            <div style="height:100%;width:100%;background:var(--secondary);border-radius:6px"></div>
+          </div>
+        </div>
+        <div class="reveal" style="--i:5">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
+            <span style="font-weight:var(--fw-semibold);font-size:var(--text-small)">Vinícius Angelo Marquezin</span>
+            <span style="font-size:var(--text-small);color:var(--muted-foreground)">28:37 · 95% da meta</span>
+          </div>
+          <div style="height:12px;background:var(--muted);border-radius:6px;position:relative;overflow:visible">
+            <div style="height:100%;width:95%;background:var(--secondary);border-radius:6px"></div>
+          </div>
+        </div>
+        <div class="reveal" style="--i:6">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
+            <span style="font-weight:var(--fw-semibold);font-size:var(--text-small)">Jonas Almeida Sousa Silva</span>
+            <span style="font-size:var(--text-small);color:var(--muted-foreground)">23:41 · 79% da meta</span>
+          </div>
+          <div style="height:12px;background:var(--muted);border-radius:6px;position:relative;overflow:visible">
+            <div style="height:100%;width:79%;background:var(--primary);border-radius:6px"></div>
+          </div>
+        </div>
+        <div class="reveal" style="--i:7">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
+            <span style="font-weight:var(--fw-semibold);font-size:var(--text-small)">Taynan Taveiros</span>
+            <span style="font-size:var(--text-small);color:var(--muted-foreground)">14:10 · 47% da meta</span>
+          </div>
+          <div style="height:12px;background:var(--muted);border-radius:6px;position:relative;overflow:visible">
+            <div style="height:100%;width:47%;background:var(--amber-400);border-radius:6px"></div>
+          </div>
+        </div>
+        <div class="reveal" style="--i:8">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
+            <span style="font-weight:var(--fw-semibold);font-size:var(--text-small)">Kleber Palma <span class="badge primary" style="margin-left:6px">atestado no período</span></span>
+            <span style="font-size:var(--text-small);color:var(--muted-foreground)">01:21 · 5% da meta</span>
+          </div>
+          <div style="height:12px;background:var(--muted);border-radius:6px;position:relative;overflow:visible">
+            <div style="height:100%;width:5%;background:var(--destructive);border-radius:6px"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout reveal" style="--i:9;margin-top:var(--space-6)">
+        <strong>Leitura:</strong> Iago, Wanderlei e Vinícius batem ou ficam a poucos minutos da meta (95 a 100%), mesmo com o Wanderlei tendo dedicado parte do período a assessment. Jonas fica em 79%. Taynan é quem tem o gap real a fechar (47%), sem causa pontual registrada. Kleber segue com causa clara (atestado).
+      </div>
+    </div>
+  </section>
+
+  <section id="destaques" class="slide s-light">
+    <div class="slide-inner">
+      <div class="eyebrow reveal" style="--i:0">Destaques e pontos de atenção</div>
+      <h2 class="title reveal" style="--i:1">O que puxa a média para cima, e o que monitorar</h2>
+      <div class="accent-bar reveal" style="--i:1"></div>
+
+      <div class="grid grid-3">
+        <div class="card reveal" style="--i:2">
+          <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.7 13.6 7 22l5-3 5 3-1.7-8.4"/></svg></div>
+          <h4>Vinícius Marquezin lidera</h4>
+          <p>Score 95, maior volume de tickets (21) e 124% de cobertura de apontamento, com compliance total.</p>
+        </div>
+        <div class="card reveal" style="--i:3">
+          <div class="card-icon" style="background:var(--blue-50);color:var(--primary)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <h4>Wanderlei: volume baixo, com motivo</h4>
+          <p>Parte do período foi dedicada a tarefas de assessment (fora do fluxo padrão de chamados), o que explica o menor volume de tickets. O SLA violado (crítica, compliance 90%) segue como ponto real de atenção.</p>
+        </div>
+        <div class="card reveal" style="--i:4">
+          <div class="card-icon" style="background:var(--blue-50);color:var(--primary)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg></div>
+          <h4>Kleber: afastado no período</h4>
+          <p>4 dias de atestado explicam o volume de apenas 1 ticket. Não reflete queda de desempenho, retomar acompanhamento no próximo ciclo.</p>
+        </div>
+      </div>
+
+      <div class="callout reveal" style="--i:5;margin-top:var(--space-6)">
+        <strong>Leitura geral:</strong> zero reopens em 5 dos 6 técnicos e compliance média acima de 98% mostram uma squad consistente. Os volumes baixos de Wanderlei e Kleber têm causas pontuais (assessment e atestado); o único ponto de atenção real da squad é o SLA violado do Wanderlei.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+const order=['splash',...[...document.querySelectorAll('.slide[id]:not(#splash)')].map(s=>s.id)];
+function goTo(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth'})}
+const main=document.querySelector('.main'),bar=document.querySelector('.progress>i'),sb=document.querySelector('.sidebar');
+const slides=order.filter(id=>id!=='splash');
+let cur=0;
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){
+    e.target.querySelector('.slide-inner')?.classList.add('in');
+    const id=e.target.id; cur=order.indexOf(id);
+    document.body.classList.toggle('nav-on',id!=='splash');
+    if(id!=='splash'){main.classList.add('with-sidebar');if(innerWidth>880)sb.classList.add('show');}
+    else{sb.classList.remove('show');main.classList.remove('with-sidebar');}
+    document.querySelectorAll('.nav-item').forEach(n=>n.classList.toggle('active',n.dataset.slide===id));
+    const i=slides.indexOf(id); if(i>=0&&bar)bar.style.width=((i+1)/slides.length*100)+'%';
+  }
+}),{threshold:.5});
+document.querySelectorAll('.slide').forEach(s=>io.observe(s));
+
+document.querySelector('.sb-toggle')?.addEventListener('click',()=>sb.classList.toggle('show'));
+document.querySelectorAll('.nav-item').forEach(n=>n.addEventListener('click',()=>{goTo(n.dataset.slide);if(innerWidth<=880)sb.classList.remove('show')}));
+
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
+  let pt=false;
+  addEventListener('scroll',()=>{if(pt)return;pt=true;requestAnimationFrame(()=>{
+    document.querySelectorAll('.parallax').forEach(el=>{
+      const r=el.getBoundingClientRect(),c=(r.top+r.height/2-innerHeight/2)/innerHeight,d=parseFloat(el.dataset.depth||'50');
+      el.style.transform='translateY('+(-c*d).toFixed(1)+'px)';
+    });pt=false});
+  },{passive:true});
+}
+
+addEventListener('keydown',e=>{
+  const k=e.key;
+  if(['ArrowDown','ArrowRight','PageDown',' '].includes(k)){e.preventDefault();goTo(order[Math.min(cur+1,order.length-1)])}
+  else if(['ArrowUp','ArrowLeft','PageUp'].includes(k)){e.preventDefault();goTo(order[Math.max(cur-1,0)])}
+  else if(k==='Home'){e.preventDefault();goTo(order[0])}
+  else if(k==='End'){e.preventDefault();goTo(order[order.length-1])}
+});
+</script>
+</body>
+</html>
